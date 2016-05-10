@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<body>
+<form name="quiz">
+<p> Solve the following problems: </p>
+<p> 1. Find the value of x, x+2x = 6:</p>
+<input type="text" id="ans">
+<p> 2. Find the area of a rectangle whose dimension is 3 m by 6 m</p>
+<input type="text" id="ans1">
+<p> 3. Find the perimeter of a square whose side is 5 m</p>
+<input type="text" id="ans2">
+<p> 4. 20% of 2 is equal to</p>
+<input type="text" id="ans3">
+<p> 5. Find the value of y in the equation yz = 36, where z = 4</p>
+<input type="text" id="ans4">
+<p> 6. The period of 2 sin x cos x is </p>
+<input type="text" id="ans5">
+<p> 7. The probability that an electronic device produced by a company does not function properly is equal to 0.1. If 10 devices are bought, then the probability, to the nearest thousandth, that 7 devices function properly is  </p>
+<input type="text" id="ans6">
+<p> 8. When a metallic ball bearing is placed inside a cylindrical container, of radius 2 cm, the height of the water, inside the container, increases by 0.6 cm. The radius, to the nearest tenth of a centimeter, of the ball bearing is  </p>
+<input type="text" id="ans7">
+<p> 9. The exam scores of all 500 students were recorded and it was determined that these scores were normally distributed. If Jane's score is 0.8 standard deviation above the mean, then how many, to the nearest unit, students scored above Jane? </p>
+<input type="text" id="ans8">
+<p> 10. A school committee consists of 2 teachers and 4 students. The number of different committees that can be formed from 5 teachers and 10 students is </p>
+<input type="text" id="ans9">
+<br>
+<br>
+<input type="text" placeholder="score" id="score" disabled>
+<input type="BUTTON" class="btn" value="Submit"  onClick="csubmit()">
+</form>
+
+<script>
+function csubmit()
+{
+var aArray = [];
+aArray[0] = document.getElementById("ans").value;
+aArray[1] = document.getElementById("ans1").value;
+aArray[2] = document.getElementById("ans2").value;
+aArray[3] = document.getElementById("ans3").value;
+aArray[4] = document.getElementById("ans4").value;
+aArray[5] = document.getElementById("ans5").value
+aArray[6] = document.getElementById("ans6").value;
+aArray[7] = document.getElementById("ans7").value;
+aArray[8] = document.getElementById("ans8").value;
+aArray[9] = document.getElementById("ans9").value;
+
+var ansArray =[];
+ansArray[0] = "2";
+ansArray[1] = "18";
+ansArray[2] = "20";
+ansArray[3] = "0.4";
+ansArray[4] = "9";
+ansArray[5] = "pi/3";
+ansArray[6] = "0.057";
+ansArray[7] = "2";
+ansArray[8] = "106";
+ansArray[9] = "2100";
+var score = 0;
+for (var i=0;i<10;i++)
+{
+    if (ansArray[i] == aArray[i])
+    {
+        score+=1;
+    }
+}
+document.getElementById("score").value = score;
+}
+</script>
+</body>
+</html>
